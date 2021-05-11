@@ -30,7 +30,7 @@ namespace User_Registration_Program
         }
         public bool Check_Password(String password)
         {
-            String Pattern_Name = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+            String Pattern_Name = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$";
             return Regex.IsMatch(password, Pattern_Name);
         }
     }
