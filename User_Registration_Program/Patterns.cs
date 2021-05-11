@@ -18,5 +18,10 @@ namespace User_Registration_Program
             String Pattern_Name = "^[A-Z]{1}[a-z]{2,}";
             return Regex.IsMatch(Last_Name, Pattern_Name);
         }
+        public bool Check_Email(String Email)
+        {
+            String Pattern_Name = "^([A-Za-z0-9]+([._+-]?[A-Za-z0-9]?)*[A-Za-z0-9]?)@(([A-Za-z0-9]+)([.-_]?([A-Za-z0-9]+)+)*)+.([A-Za-z]{2,})+$";
+            return Regex.IsMatch(Email, Pattern_Name);
+        }
     }
 }

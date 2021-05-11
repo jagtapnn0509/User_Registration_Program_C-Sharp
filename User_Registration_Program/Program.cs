@@ -39,7 +39,24 @@ namespace User_Registration_Program
             }
             Console.WriteLine("----------------------------------------------------");
         }
-       
+        public void valid_Email()
+        {
+            Patterns pattern = new Patterns();
+            Console.Write("Enter The Email ID : ");
+            String Email = (Console.ReadLine());
+            Boolean Regex_Name = pattern.Check_Email(Email);
+
+            if (Regex_Name)
+            {
+                Console.WriteLine("Email id is valid");
+            }
+            else
+            {
+                Console.WriteLine("Email id is Invalid");
+            }
+            Console.WriteLine("----------------------------------------------------");
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
@@ -47,6 +64,7 @@ namespace User_Registration_Program
             Program program = new Program();
             program.Valid_FirstName();
             program.valid_LastName();
+            program.valid_Email();
         }
     }
 }
