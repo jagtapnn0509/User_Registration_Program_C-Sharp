@@ -101,7 +101,7 @@ namespace User_Registration_Program
             program.valid_Email();
             program.valid_PhoneNo();
             program.valid_Password();
-            
+
         }
     }
 }
