@@ -73,6 +73,23 @@ namespace User_Registration_Program
             }
             Console.WriteLine("----------------------------------------------------");
         }
+        public void valid_Password()
+        {
+            Patterns pattern = new Patterns();
+            Console.Write("Enter The Password : ");
+            String password = (Console.ReadLine());
+            Boolean Regex_Name = pattern.Check_Password(password);
+
+            if (Regex_Name)
+            {
+                Console.WriteLine("Password  id is valid");
+            }
+            else
+            {
+                Console.WriteLine("Password id is Invalid");
+            }
+            Console.WriteLine("----------------------------------------------------");
+        }
 
         static void Main(string[] args)
         {
@@ -83,6 +100,7 @@ namespace User_Registration_Program
             program.valid_LastName();
             program.valid_Email();
             program.valid_PhoneNo();
+            program.valid_Password();
             
         }
     }

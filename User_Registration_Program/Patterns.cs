@@ -25,8 +25,13 @@ namespace User_Registration_Program
         }
         public bool Check_PhoneNo(String Phone_No)
         {
-            String Pattern_Name = "^[0-9]{2}[ ][1-9]{1}[0-9]{9}";
+            String Pattern_Name = "^[0-9]{2}[ ][1-9]{1}[0-9]{9}$";
             return Regex.IsMatch(Phone_No, Pattern_Name);
+        }
+        public bool Check_Password(String password)
+        {
+            String Pattern_Name = "^[a-zA-Z0-9]{8,}$";
+            return Regex.IsMatch(password, Pattern_Name);
         }
     }
 }
