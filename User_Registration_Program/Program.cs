@@ -56,6 +56,23 @@ namespace User_Registration_Program
             }
             Console.WriteLine("----------------------------------------------------");
         }
+        public void valid_PhoneNo()
+        {
+            Patterns pattern = new Patterns();
+            Console.Write("Enter The Phone No : ");
+            String Phone_No = (Console.ReadLine());
+            Boolean Regex_Name = pattern.Check_PhoneNo(Phone_No);
+
+            if (Regex_Name)
+            {
+                Console.WriteLine("Phone No id is valid");
+            }
+            else
+            {
+                Console.WriteLine("Phone No id is Invalid");
+            }
+            Console.WriteLine("----------------------------------------------------");
+        }
 
         static void Main(string[] args)
         {
@@ -65,6 +82,8 @@ namespace User_Registration_Program
             program.Valid_FirstName();
             program.valid_LastName();
             program.valid_Email();
+            program.valid_PhoneNo();
+            
         }
     }
 }

@@ -23,5 +23,10 @@ namespace User_Registration_Program
             String Pattern_Name = "^([A-Za-z0-9]+([._+-]?[A-Za-z0-9]?)*[A-Za-z0-9]?)@(([A-Za-z0-9]+)([.-_]?([A-Za-z0-9]+)+)*)+.([A-Za-z]{2,})+$";
             return Regex.IsMatch(Email, Pattern_Name);
         }
+        public bool Check_PhoneNo(String Phone_No)
+        {
+            String Pattern_Name = "^[0-9]{2}[ ][1-9]{1}[0-9]{9}";
+            return Regex.IsMatch(Phone_No, Pattern_Name);
+        }
     }
 }
